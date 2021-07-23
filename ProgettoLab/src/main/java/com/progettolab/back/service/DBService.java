@@ -1,11 +1,8 @@
 package com.progettolab.back.service;
 
 import com.progettolab.back.*;
-
-
-
-
-
+import com.progettolab.back.domain.CentriVaccinali;
+import com.progettolab.back.repository.CentriVaccinaliRepository;
 
 import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;

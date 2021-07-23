@@ -1,4 +1,7 @@
-package com.progettolab.back;
+package com.progettolab.back.repository;
+
+
+import com.progettolab.back.domain.EventiAvversi;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.*;

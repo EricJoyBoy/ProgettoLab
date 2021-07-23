@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.progettolab.back.CentriVaccinali;
-import com.progettolab.back.CentriVaccinaliRepository;
+import com.progettolab.back.domain.CentriVaccinali;
+import com.progettolab.back.repository.CentriVaccinaliRepository;
 import com.progettolab.back.service.exceptions.ObjectNotFoundException;
 
 @Service

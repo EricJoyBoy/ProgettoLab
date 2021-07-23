@@ -7,7 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.progettolab.back.CentriVaccinali;
+
+import com.progettolab.back.domain.CentriVaccinali;
 import com.progettolab.back.service.CentriVaccinaliService;
 
 @RestController

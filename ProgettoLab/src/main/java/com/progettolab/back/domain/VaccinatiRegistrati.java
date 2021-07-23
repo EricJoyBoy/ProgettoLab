@@ -1,4 +1,4 @@
-package com.progettolab.back;
+package com.progettolab.back.domain;
 
 import javax.persistence.*;
 
