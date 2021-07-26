@@ -1,5 +1,6 @@
 package com.progettolab.back.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,4 +45,8 @@ public class CentriVaccinaliService {
 		return repository.save(obj);
 		
 		}
+	
+	public List<CentriVaccinali> findAll(){
+		return repository.findAll();
+	}
 }

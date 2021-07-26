@@ -1,5 +1,9 @@
 package com.progettolab.back.resources;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
+import com.progettolab.back.dtos.*;
 import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +14,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.progettolab.back.domain.CentriVaccinali;
 import com.progettolab.back.service.CentriVaccinaliService;
+
+
 
 @RestController
 @RequestMapping(value="/centrivaccinali")
@@ -44,4 +50,11 @@ public class CentriVaccinaliResource {
 		return ResponseEntity.ok().body(new CentriVaccinali());
 	}
 
+	@GetMapping
+	public ResponseEntity<List<CentriVaccinaliDTO>> findAll(){
+		List<CentriVaccinali> list = service.findAll();
+		List<CentriVaccinaliDTO> listDTO=list.stream().map(obj-> new CentriVaccinaliDTO(obj)).collect(Collectors.toList());
+		return ResponseEntity.ok().body(listDTO);
+		
+	}
 }
