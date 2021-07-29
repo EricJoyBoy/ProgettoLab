@@ -1,10 +1,12 @@
 package com.progettolab.back.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.progettolab.back.domain.CentriVaccinali;
 import com.progettolab.back.domain.CittadiniRegistrati;
 import com.progettolab.back.repository.CittadiniRegistratiRepository;
 import com.progettolab.back.service.exceptions.ObjectNotFoundException;
@@ -43,4 +45,10 @@ public class CittadiniRegistratiService {
 		return repository.save(obj);
 		
 		}
+	
+	public List<CittadiniRegistrati> findAll(){
+		return repository.findAll();
+	}
+	
+	
 }

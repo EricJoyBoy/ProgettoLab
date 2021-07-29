@@ -1,14 +1,17 @@
 package com.progettolab.back.resources;
 
 import java.net.URI;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-
 import com.progettolab.back.domain.EventiAvversi;
+import com.progettolab.back.domain.EventiAvversi;
+import com.progettolab.back.dtos.EventiAvversiDTO;
 import com.progettolab.back.service.EventiAvversiService;
 
 @RestController
@@ -43,6 +46,15 @@ public class EventiAvversiResources {
 		
 		return ResponseEntity.ok().body(new EventiAvversi());
 	}
+	
+	@GetMapping
+	public ResponseEntity<List<EventiAvversiDTO>> findAll(){
+		List<EventiAvversi> list = service.findAll();
+		List<EventiAvversiDTO> listDTO=list.stream().map(obj-> new EventiAvversiDTO(obj)).collect(Collectors.toList());
+		return ResponseEntity.ok().body(listDTO);
+		
+	}
+
 
 
 }

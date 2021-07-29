@@ -1,10 +1,12 @@
 package com.progettolab.back.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.progettolab.back.domain.EventiAvversi;
 import com.progettolab.back.domain.VaccinatiRegistrati;
 import com.progettolab.back.repository.VaccinatiRegistratiRepository;
 import com.progettolab.back.service.exceptions.ObjectNotFoundException;
@@ -44,4 +46,8 @@ public class VaccinatiRegistratiService {
 		
 		}
 
+	
+	public List<VaccinatiRegistrati> findAll(){
+		return repository.findAll();
+	}
 }
